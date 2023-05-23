@@ -87,7 +87,9 @@ async function run() {
         }
       }
             
-      const cursor = database.find(query);
+      const cursor = database.find(query).sort({
+          price: req.query.sort === "acc" ? 1 : -1,
+        });
       const result = await cursor.toArray();
       res.send(result);
     });
