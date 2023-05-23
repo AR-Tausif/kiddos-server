@@ -98,7 +98,7 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result);
     });
-    app.delete("/products/email", async (req, res) => {
+    app.delete("/products", async (req, res) => {
         const id = req.query.id;
         console.log(id)
       const query = { _id: new ObjectId(id) };
