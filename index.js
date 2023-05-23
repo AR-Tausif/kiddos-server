@@ -70,10 +70,7 @@ async function run() {
     //     .limit(parseFloat(req.query.limit || 20))
     //     .sort({
     //       price: req.query.sort === "acc" ? 1 : -1,
-    //     });
-    //   const result = await cursor.toArray();
-    //   return res.send(result);
-    // });
+   
 
     app.get("/products", async (req, res) => {
       const sort = req.query.sort;
